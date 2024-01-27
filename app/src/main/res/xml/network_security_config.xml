@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">newsapi.org</domain>
+        <domain includeSubdomains="true">sni.cloudflaressl.com</domain>
+        <domain includeSubdomains="true">zscaler.net</domain>
+        <trust-anchors>
+            <certificates src="@raw/enci"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
+
+<!--
+<domain-config cleartextTrafficPermitted="true">
+<domain includeSubdomains="true">newsapi.org</domain>
+<domain includeSubdomains="true">sni.cloudflaressl.com</domain>
+<domain includeSubdomains="true">zscaler.net</domain>
+<domain includeSubdomains="true">com.example.someoldjokes</domain>
+<trust-anchors>
+    <certificates src="@raw/enci"/>
+</trust-anchors>
+</domain-config>
+
+-->
+
+
+
+
+<!--
+<base-config cleartextTrafficPermitted="true">
+<trust-anchors>
+
+    <certificates src="system"></certificates>
+    <certificates src="user"></certificates>
+
+</trust-anchors>
+</base-config>
+-->
